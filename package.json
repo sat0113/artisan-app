@@ -7,9 +7,10 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "heroku-postbuild": "npm run production"
     },
-    "devDependencies": {
+    "dependencies": {
         "axios": "^0.21",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
