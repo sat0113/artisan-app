@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name',100);
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('leave_flg')->unsigned()->default(0);
+            $table->boolean('leave_flg')->unsigned()->default(0);
             $table->timestamps();
         });
     }

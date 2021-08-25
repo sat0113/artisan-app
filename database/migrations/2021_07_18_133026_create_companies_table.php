@@ -17,8 +17,8 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name',100);
             $table->string('address');
-            // $table->締め日のカラムがわからない
-            $table->integer('leave_flg')->unsigned()->default(0);
+            $table->integer('dayOfMonth');
+            $table->boolean('leave_flg')->unsigned()->default(0);
             $table->timestamps();
         });
     }

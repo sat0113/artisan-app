@@ -9,11 +9,18 @@ class Manager extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'company_id',
-        'email',
-        'password',
-        'leave_flg',
-    ];
+    protected $guarded = array('id');
+
+    public static $rules = array(
+        'name' => 'required',
+        'company_id' => 'required',
+        'email' => 'email',
+        'password' => 'required',
+        'leave_flg' => 'required',
+    );
+
+    public function getData()
+    {
+        return $this->id .':'. $this->name .'(' .$this->company_id.')';
+    }
 }

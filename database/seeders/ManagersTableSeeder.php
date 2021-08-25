@@ -13,7 +13,7 @@ class ManagersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Manager::factory(5)->create();
+        \App\Models\Manager::factory(2)->create();
 
     }
 }

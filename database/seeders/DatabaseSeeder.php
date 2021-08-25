@@ -13,8 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(5)->create();
-        \App\Models\Manager::factory(5)->create();
-        \App\Models\Company::factory(5)->create();
+        \App\Models\User::factory(3)->create();
+        \App\Models\Manager::factory(2)->create();
+        $this->call([
+            CompaniesTableSeeder::class,
+            GenbaTableSeeder::class,
+            DeduraTableSeeder::class,
+        ]);
+
     }
 }

@@ -15,11 +15,11 @@ class CreateManagersTable extends Migration
     {
         Schema::create('managers', function (Blueprint $table) {
             $table->id();
-            $table->integer('company_id');
             $table->string('name',100);
+            $table->bigInteger('company_id')->constrained();
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('leave_flg')->unsigned()->default(0);
+            $table->boolean('leave_flg')->unsigned()->default(0);
             $table->timestamps();
         });
     }
