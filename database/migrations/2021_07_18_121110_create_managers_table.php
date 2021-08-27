@@ -16,7 +16,7 @@ class CreateManagersTable extends Migration
         Schema::create('managers', function (Blueprint $table) {
             $table->id();
             $table->string('name',100);
-            $table->bigInteger('company_id')->constrained();
+            $table->bigInteger('company_id')->nullable()->constrained();
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('leave_flg')->unsigned()->default(0);
