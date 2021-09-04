@@ -22,7 +22,7 @@ class AuthController extends Controller
     }
     /**
      *@param App\Http\Requests\LoginFormRequest $request
-    */ 
+    */
     public function login(LoginFormRequest $request){
         $credentials = $request->only('email','password');
 
@@ -62,7 +62,7 @@ class AuthController extends Controller
     }
     /**
      *@param App\Http\Requests\LoginFormRequest $request
-    */ 
+    */
     public function login2(LoginFormRequest $request){
         $credentials = $request->only('email','password');
 

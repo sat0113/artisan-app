@@ -22,11 +22,12 @@ class AuthController extends Controller
     }
     /**
      *@param App\Http\Requests\LoginFormRequest $request
-    */ 
+    */
     public function login(LoginFormRequest $request){
-        $credentials = $request->only('email','password');
 
-        if(Auth::attempt($credentials)){
+        $credentials = $request->only('email','password');
+        if(Auth::guard('managers')->attempt($credentials)) {
+
             $request->session()->regenerate();
 
             return redirect()->route('home')->with('login_success','ログインが成功しました！');
@@ -62,7 +63,7 @@ class AuthController extends Controller
     }
     /**
      *@param App\Http\Requests\LoginFormRequest $request
-    */ 
+    */
     public function login2(LoginFormRequest $request){
         $credentials = $request->only('email','password');
 
