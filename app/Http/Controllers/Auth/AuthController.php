@@ -91,6 +91,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('Login.show')->with('logout','ログアウトしました！');
+        return redirect()->route('Login.show2')->with('logout','ログアウトしました！');
     }
 }

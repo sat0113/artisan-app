@@ -49,14 +49,14 @@
 <body>
     <header>
         <div class="header-in">
-            <h1><a href="top.html">DEDURA</a></h1>
+            <h1><a href="{{ route('top') }}">DEDURA</a></h1>
         </div>
     </header>
     <div class="box">
         <div class="box1">
             <a href="{{ route('Login.show2') }}"><img src="img/1.jpg" alt="">
             <p>私は職人です</p></a>
-        </div> 
+        </div>
         <div class="box1">
             <a href="{{ route('Login.show') }}"><img src="img/2.jpg" alt="">
             <p>私は管理者です</p></a>
@@ -65,7 +65,7 @@
 
     <footer>
         <div class="footer-in">
-            <h3><a href="top.html">DEDURA</a></h3>
+            <h3><a href="{{ route('top') }}">DEDURA</a></h3>
             <a href="footer4.html" class="footer-under">＞お問い合わせ</a>
         </div>
     </footer>

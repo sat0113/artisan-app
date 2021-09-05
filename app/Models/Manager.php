@@ -4,10 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable; // ←←←← 注目
 
-
-class Manager extends Authenticatable
+class Manager extends Model
 {
     use HasFactory;
 

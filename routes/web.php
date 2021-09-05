@@ -42,7 +42,7 @@ Route::group(['middleware' => ['guest']], function () {
 
 });
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth:managers']], function () {
     // 管理者編集ページ
     Route::get('login/add',[ManagerController::class,'add'])->name('add');
     // 管理者更新ページ
@@ -83,7 +83,7 @@ Route::group(['middleware' => ['guest']], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     // ログアウト
-    // Route::post('logout',[AuthController::class,'logout'])->name('logout');
+    Route::post('logout2',[AuthController::class,'logout2'])->name('logout2');
     // ホーム画面
     Route::get('home2',[HomeController::class,'home2'])->name('home2');
     // 出面選択画面

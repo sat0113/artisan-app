@@ -132,7 +132,7 @@
             <p><a href="{{ $next }}">来月＞＞</a></p>
         </div>
         <div class="button"></div>
-            <button><a href="manager_category1.html">戻る</a></button>
-            <button><a href="manager_side2.html">メニューに戻る</a></button>
+            <button><a href="{{ route('dedura') }}">戻る</a></button>
+            <button><a href="{{ route('home') }}">メニューに戻る</a></button>
         </div>
 @endsection

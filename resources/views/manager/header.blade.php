@@ -1,5 +1,5 @@
 <div class="header-in">
-    <h1><a href="manager_side2.html">DEDURA</a></h1>
+    <h1><a href="{{ route('home') }}">DEDURA</a></h1>
     <button id="js-show-popup"><img src="img/10.png" class="icon-user">現場検索</button>
     <div class="btn">
         <form action="{{ route('logout') }}" method="post">
