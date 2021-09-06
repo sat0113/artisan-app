@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 
+
 class ManagerController extends Controller
 {
     /**
@@ -43,21 +44,21 @@ class ManagerController extends Controller
      * 管理者ページ編集画面を表示する
      * @return view
      */
-    // public function add() {
+    public function add() {
 
-    //     return view('login/add');
-    // }
-
-
-    public function add($id) {
-        $manager = Manager::find($id);
-
-        if(is_null($manager)){
-            \session::flash('err_msg','データがありません。');
-            return redirect(route('home'));
-        }
-        return view('login/add',['manager' => $manager]);
+        return view('login/add');
     }
+
+
+    // public function add($id) {
+    //     $manager = Manager::find($id);
+
+    //     if(is_null($manager)){
+    //         session::flash('err_msg','データがありません。');
+    //         return redirect(route('home'));
+    //     }
+    //     return view('login/add',['manager' => $manager]);
+    // }
 
     // public function update(Request $request) {
     //     $this->validate($request, Manager::$rules);

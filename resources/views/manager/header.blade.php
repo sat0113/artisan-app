@@ -7,6 +7,5 @@
             <button><img src="img/8.jpg" class="icon-user">ログアウト</button>
         </form>
         <a href="{{ route('add') }}"><img src="img/9.jpg" class="icon-user">管理者ページ</a>
-        <!-- <a href="{{route('add')}}"><img src="img/9.jpg" class="icon-user">管理者ページ</a> -->
     </div>
 </div>
